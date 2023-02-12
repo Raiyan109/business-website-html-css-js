@@ -34,6 +34,7 @@ header nav .logo h1 {
 
 header nav ul {
     display: flex;
+    list-style: none;
 }
 
 header nav ul li a {
@@ -46,7 +47,7 @@ header nav ul li a {
 header .hero-text {
     width: 80%;
     height: 50vh;
-    margin: 20px auto;
+    margin-top: 150px;
 }
 
 header .hero-text h1 {
@@ -91,14 +92,14 @@ section p {
 }
 
 section .services-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 40px;
+    gap: 20px;
 }
 
 section .service {
-    width: calc(33.33% - 20px);
+    width: 100%;
     background-color: white;
     padding: 40px;
     text-align: center;
@@ -122,9 +123,29 @@ section .service p {
     margin-bottom: 20px;
 }
 
+#about {
+    margin-top: 40px;
+    height: 400px;
+    background-image: linear-gradient(to right, #75d7e0, #c6cad1);
+    line-height: 40px;
+}
+
 footer {
     background-color: #1c2331;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    section .services-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #about {
+        height: 700px;
+        line-height: 20px;
+    }
 }
